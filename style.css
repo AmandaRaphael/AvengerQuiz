@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Estonia&family=Shalimar&family=Tangerine:wght@400;700&family=ZCOOL+XiaoWei&display=swap');
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+:root {
+  --hue-neutral: 200;
+  --hue-wrong: 0;
+  --hue-correct: 145;
+}
+body {
+  --hue: var(--hue-neutral);
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Shalimar', cursive;
+  background-image: url("./images/Avengers-Infinity-War-Los-Vengadores-3-imagen-set-1-e1478680669894.jpg");
+  background-size: cover;
+}
+h1{
+  font-size:150px;
+  color:white;
+  font-family: 'Shalimar', cursive;
+  position: absolute;
+  top:5px;
+  left:5px;
+}
+body.correct {
+  --hue: var(--hue-correct);
+}
+body.wrong {
+  --hue: var(--hue-wrong);
+}
+.container {
+  width: 800px;
+  max-width: 80%;
+  border-radius: 5px;
+  background-color:rgba(206, 13, 13,0.5);
+  z-index:1;
+  padding: 10px;
+  box-shadow: 0 0 10 2px;
+}
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 0;
+  margin: 20px 0;
+}
+.btn {
+  --hue: var(--hue-neutral);
+  border: 1px solid white;
+  background-color: hsl(var(--hue), 100%, 30%);
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white;
+  outline: none;
+  margin: 5px;
+  font-weight: bolder;
+}
+#question{
+  color:white;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+}
+.btn:hover {
+  border: 2px solid rgb(32, 8, 243);
+  
+}
+.btn.correct {
+  --hue: var(--hue-correct);
+  color: black;
+}
+.btn.wrong {
+  --hue: var(--hue-wrong);
+}
+.start-btn,
+.next-btn {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hide {
+  display: none;
+}
+.counter-display{
+  margin:1%;
+  font-size: 2.5rem;
+  text-align: center;
+  color: white;
+}
+
+.lifeline-btn{
+  margin:2%;
+  padding: 10px;
+ 
+}
+#points-container{
+  margin:1%;
+  color: white;
+}
+.clock {
+    position: absolute;
+    top:  0%;
+    left: 0%;
+    /* transform: translateX(-50%) translateY(-50%); */
+    color: white;
+    /* color: #17D4FE; */
+    font-size: 20px;
+    font-family: Orbitron;
+    letter-spacing: 7px;
+}
+body{
+  position: relative;
+}
+/* lifeline hovering text */
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(3, 16, 32);
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip.tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+/* initialsetup container */
+.userData-container{
+  height:30vh;
+  width:30vw;
+  background-color: rgba(102, 89, 17, 0.5);
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:20px;
+  color: azure;
+}

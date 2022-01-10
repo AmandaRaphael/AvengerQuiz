@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dare to play</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <h1>Dare to Play!</h1>
+    <div class="time-display">
+      <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+    </div>
+    <div class="highScores">
+
+    </div>
+    <div id="enterName" class="userData-container">
+      <div>
+        <label for="username">Player Name</label>
+        <input
+          type="text"
+          placeholder="Enter your name"
+          required
+          id="username"
+        />
+      </div>
+      <input type="submit" onclick="initialSetUp()" />
+    </div>
+    <div class="container hide">
+      <div id="display-container" class="hide">
+        <h2 class="counter-display">Count down begins...</h2>
+      </div>
+      <div id="points-container" class="hide">
+        <h2 class="points-display"></h2>
+      </div>
+      <div id="lifeline-container" class="lifeline hide">
+        <div class="tooltip">
+          <img
+            id="lifeline-btn50-50"
+            class="lifeline-btn btn50-50"
+            src="./images/50-50_2018.gif"
+            alt="50-50 gif"
+            width="80px"
+          />
+          <span class="tooltiptext span50-50 hide"
+            >Deletes two wrong answers</span
+          >
+        </div>
+        <div class="tooltip">
+          <img
+            id="lifeline-btnStopTimer"
+            class="lifeline-btn btnStopTimer"
+            src="./images/clock.gif"
+            width="80px"
+            alt="timer gif"
+          />
+          <span class="tooltiptext stopTimerSpan hide">Stops the Timer!</span>
+        </div>
+
+        <div class="tooltip">
+          <img
+            id="lifeline-btnSwapQ"
+            class="lifeline-btn btnSwapQuestion"
+            src="./images/arrows.jpg"
+            alt="skip gif"
+            width="60px"
+          />
+          <span class="tooltiptext swapqSpan hide">Skips This question</span>
+        </div>
+      </div>
+      <div id="question-container" class="hide">
+        <div id="question">q</div>
+        <div id="answer-buttons" class="btn-grid">
+          <button class="btn">Ans1</button>
+          <button class="btn">Ans1</button>
+          <button class="btn">Ans1</button>
+          <button class="btn">Ans1</button>
+        </div>
+      </div>
+      <div class="controls">
+        <button id="start-btn" class="start-btn btn">start</button>
+        <button id="next-btn" class="next-btn btn hide">next</button>
+      </div>
+    </div>
+  </body>
+</html>
