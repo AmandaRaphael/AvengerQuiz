@@ -14,7 +14,7 @@
       <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
     </div>
     <div class="highScores">
-
+      <p>HIGHEST SCORES</p>
     </div>
     <div id="enterName" class="userData-container">
       <div>
@@ -24,9 +24,11 @@
           placeholder="Enter your name"
           required
           id="username"
+          size="30"
+          style="height: 35px"
         />
       </div>
-      <input type="submit" onclick="initialSetUp()" />
+      <input type="submit" class="submitButton" onclick="initialSetUp()" />
     </div>
     <div class="container hide">
       <div id="display-container" class="hide">

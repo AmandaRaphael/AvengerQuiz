@@ -180,5 +180,26 @@ body{
   justify-content: center;
   align-items: center;
   gap:20px;
-  color: azure;
+  color: rgb(16, 241, 241);
+  font-weight: bold;
+  font-size: larger;
+}
+.submitButton {
+     background:#0066A2;
+     color:white;
+     border-style:outset;
+     border-color:#0066A2;
+     height:40px;
+     width:80px;
+     font:bold15px arial,sans-serif;
+     text-shadow:none;
+     font-weight: bold;
+}
+.highScores {
+  position: absolute;
+  top: 0%;
+  right: 1%;
+  font-size: 20px;
+  color: white;
+  letter-spacing: 2px;
 }

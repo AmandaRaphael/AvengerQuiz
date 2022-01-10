@@ -18,6 +18,7 @@ let count = 10;
 var myInterval;
 let randomQuestion, currentQuestionIndex;
 let userData = { username: "", score: 0 };
+let highScore = [];
 function initialSetUp() {
   getVal()
    document.querySelector(".userData-container").style.display="none";
@@ -107,12 +108,12 @@ function resetCountDown() {
 }
 const questions = [
   {
-    question: "What is the colour of Hulk?",
+    question: "What war did Captain America fight in?",
     answers: [
-      { text: `pink`, correct: false },
-      { text: `red`, correct: false },
-      { text: `yellow`, correct: false },
-      { text: `green`, correct: true },
+      { text: `World War 1`, correct: false },
+      { text: `World War 2`, correct: true },
+      { text: `Vietnam War`, correct: false },
+      { text: `Gulf War`, correct: true },
     ],
   },
   {
@@ -125,12 +126,12 @@ const questions = [
     ],
   },
   {
-    question: "Which avenger has a Hammer?",
+    question: "What is the name of Thor's Hammer?",
     answers: [
-      { text: `Spider-Man`, correct: false },
-      { text: `Captian America`, correct: false },
-      { text: `Thor`, correct: true },
-      { text: `Hulk`, correct: false },
+      { text: `Aesir`, correct: false },
+      { text: `Fâner`, correct: false },
+      { text: `Mjolnir`, correct: true },
+      { text: `Rêquaer`, correct: false },
     ],
   },
   {
@@ -261,7 +262,10 @@ function selectAnswer(e) {
     questionContainer.classList.add("hide");
     counterDisplayElem.innerText = "Press Restart to continue.";
     userData.score = points;
-    console.log(userData.score);
+    // console.log('userdata',userData);
+    
+    // highScore.push(userData);
+    // console.log(`hi`,highScore);
     
     let point;
     point = points == 1 ? `point` : "points";
