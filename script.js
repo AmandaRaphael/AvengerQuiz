@@ -113,7 +113,7 @@ const questions = [
       { text: `World War 1`, correct: false },
       { text: `World War 2`, correct: true },
       { text: `Vietnam War`, correct: false },
-      { text: `Gulf War`, correct: true },
+      { text: `Gulf War`, correct: false },
     ],
   },
   {
@@ -175,22 +175,22 @@ function showQuestion(questionEle) {
 //50-50
 const lifelineFunction50_50 =() =>{
   points--;
-  const buttons = Array.from(answerButtonsElement.children);
-  let deletedButton = 0;
-  for (i = 0; i < 3; i++) {
-    if (!buttons[i].dataset.correct) {
-      buttons[i].classList.add("hide");
-      deletedButton++;
-    }
-    if (deletedButton == 2) {
-      break;
-    }
-  }
+  // const buttons = Array.from(answerButtonsElement.children);
+  // let deletedButton = 0;
+  // for (i = 0; i < 3; i++) {
+  //   if (!buttons[i].dataset.correct) {
+  //     buttons[i].classList.add("hide");
+  //     deletedButton++;
+  //   }
+  //   if (deletedButton == 2) {
+  //     break;
+  //   }
+  // }
   lifelineEle50_50.classList.add("hide");
   //this will not work for forEach
   // Array.from(answerButtonsElement.children).forEach((button,index) => {
   //   if (!button.dataset.correct) {
-  //     for (index = 0; index > 2; index++){
+  //     for (index = 0; index < 2; index++){
   //       button.classList.add("hide")
   //     }
 
